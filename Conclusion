@@ -1,0 +1,17 @@
+Roc_auc_score: Fasttext=0.841 > LSTM=0.7960 > SVM(linear)
+
+Time cost:     Fasttext < SVM(linear)  < LSTM
+
+Comparing with other 2 models, Fasttext is the best one.
+
+
+
+SVM: does not perform well because it cannot use context information, but simply vectorizes the text and then classifies it.
+
+LSTM: can use context information, but  it has a high time and ROM cost.
+
+Both SVM and LSTM cannot preprocess data.
+
+
+Fasttext: 1.fastText does not require pre-trained word vectors, fastText will train word vectors by itself.
+          2.Two important optimizations of fastText (Hierarchical Softmax, N-gram) perform better
